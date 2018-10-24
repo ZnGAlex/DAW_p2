@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GRID</title>
+    <style>
+        .item1 { grid-area: header; }
+        .item2 { grid-area: menu; }
+        .item3 { grid-area: main; }
+        .item4 { grid-area: esquerdo; }
+        .item5 { grid-area: dereito; }
+        .item6 { grid-area: footer}
+        body {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                    'header header header header'
+                    'menu menu menu menu'
+                    'main main main main'
+                    'esquerdo esquerdo esquerdo dereito'
+                    'footer footer footer footer';
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+        .actualidad {
+            display: grid;
+            grid-template-areas:
+                    'article article'
+                    'article article';
+            grid-gap: 10px;
+            background-color: yellow;
+            padding: 10px;
+        }
+        article {
+            border: #2196F3;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="item1" style="background-color: aqua;">
+            <p>header</p>
+        </header>
+        <nav class="item2" style="background-color: yellow;">
+            <p>MENU</p>
+        </nav>
+        <section class="item3" style="background-color: green">
+            <p>DESTACADOS</p>
+        </section>
+        <section class="actualidad item4" style="background-color: darkgray;">
+            <article>
+                <p>articulo 1</p>
+            </article>
+            <article>
+                <p>articulo 2</p>
+            </article>
+            <article>
+                <p>articulo 3</p>
+            </article>
+            <article>
+                <p>articulo 4</p>
+            </article>
+        </section>
+        <aside class="item5" style="background-color: cornsilk;">
+            <p>aside</p>
+        </aside>
+        <footer class="item6" style="background-color: aquamarine;">
+            <p>footer</p>
+        </footer>
+    </div>
+</body>
+</html>
